@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fe51993-522f-4345-9199-99e4e7de54fd" name="Changes" comment="feat(config-server): first service creation">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0fe51993-522f-4345-9199-99e4e7de54fd" name="Changes" comment="feat(eureka-server): first service creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +104,7 @@
       <workItem from="1728441159748" duration="1364000" />
       <workItem from="1728442585899" duration="347000" />
       <workItem from="1728442937790" duration="359000" />
-      <workItem from="1728443335052" duration="336000" />
+      <workItem from="1728443335052" duration="1518000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config-server): first service creation">
       <option name="closed" value="true" />
@@ -125,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728442591714</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(eureka-server): first service creation">
+      <option name="closed" value="true" />
+      <created>1728443790238</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728443790238</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +149,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(config-server): first service creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(config-server): first service creation" />
+    <MESSAGE value="feat(eureka-server): first service creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(eureka-server): first service creation" />
   </component>
 </project>
