@@ -8,13 +8,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="eureka-server" />
+        <module name="health-data-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="anxiety-biometric-data" target="21" />
+      <module name="anxiety-biometric-data-service" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="anxiety-biometric-data" options="-parameters" />
+      <module name="anxiety-biometric-data-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="health-data-service" options="-parameters" />
     </option>
   </component>
 </project>
