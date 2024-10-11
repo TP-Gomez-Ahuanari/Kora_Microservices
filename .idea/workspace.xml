@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fe51993-522f-4345-9199-99e4e7de54fd" name="Changes" comment="feat(eureka-server): first service creation">
-      <change afterPath="$PROJECT_DIR$/health-data-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/HealthDataServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/test/java/com/kora/healthdataservice/HealthDataServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/IdentityAccessServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/test/java/com/kora/identityaccessservice/IdentityAccessServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -24,6 +24,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,36 +53,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JUnit.All in health-data-service.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.HealthDataServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/crist/Documents/UPC - Ingeniería de Software/Ciclo 9/Kora_Microservices&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.All in health-data-service.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.HealthDataServiceApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "23",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/crist/Documents/UPC - Ingeniería de Software/Ciclo 9/Kora_Microservices",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "project.scopes",
+    "spring.configuration.checksum": "f523571f911f50cb62c71d1c7fd5927f",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -123,6 +130,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IdentityAccessServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="identity-access-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kora.identityaccessservice.IdentityAccessServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.HealthDataServiceApplication" />
@@ -153,6 +167,9 @@
       <workItem from="1728443335052" duration="1988000" />
       <workItem from="1728446002821" duration="3457000" />
       <workItem from="1728449543170" duration="92000" />
+      <workItem from="1728623384265" duration="103000" />
+      <workItem from="1728623514912" duration="1478000" />
+      <workItem from="1728625034226" duration="5443000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config-server): first service creation">
       <option name="closed" value="true" />
