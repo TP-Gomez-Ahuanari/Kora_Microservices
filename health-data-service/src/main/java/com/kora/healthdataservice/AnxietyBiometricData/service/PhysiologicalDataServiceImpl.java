@@ -54,7 +54,7 @@ public class PhysiologicalDataServiceImpl implements PhysiologicalDataService {
 
         if(physiologicalData.isEmpty())
             throw new ResourceValidationException(ENTITY,
-                    "Not found Certifications for this physiotherapist");
+                    "Not found Physiological Data for this patient");
 
         return physiologicalData;
     }

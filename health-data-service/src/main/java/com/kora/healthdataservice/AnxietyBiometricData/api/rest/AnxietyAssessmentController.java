@@ -1,10 +1,10 @@
 package com.kora.healthdataservice.AnxietyBiometricData.api.rest;
 
-import com.kora.healthdataservice.AnxietyBiometricData.domain.service.PhysiologicalDataService;
-import com.kora.healthdataservice.AnxietyBiometricData.mapping.PhysiologicalDataMapper;
-import com.kora.healthdataservice.AnxietyBiometricData.resource.PhysiologicalData.CreatePhysiologicalDataResource;
-import com.kora.healthdataservice.AnxietyBiometricData.resource.PhysiologicalData.PhysiologicalDataResource;
-import com.kora.healthdataservice.AnxietyBiometricData.resource.PhysiologicalData.UpdatePhysiologicalDataResource;
+import com.kora.healthdataservice.AnxietyBiometricData.domain.service.AnxietyAssessmentService;
+import com.kora.healthdataservice.AnxietyBiometricData.mapping.AnxietyAssessmentMapper;
+import com.kora.healthdataservice.AnxietyBiometricData.resource.AnxietyAssessment.AnxietyAssessmentResource;
+import com.kora.healthdataservice.AnxietyBiometricData.resource.AnxietyAssessment.CreateAnxietyAssessmentResource;
+import com.kora.healthdataservice.AnxietyBiometricData.resource.AnxietyAssessment.UpdateAnxietyAssessmentResource;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -21,18 +21,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/health-data/physiological-data", produces = "application/json")
-@Tag(name = "Physiological Data", description = "Physiological Data operations: listing, retrieval, creation, update, and deletion")
-public class PhysiologicalDataController {
-    private final PhysiologicalDataService physiologicalDataService;
-    private final PhysiologicalDataMapper mapper;
+@RequestMapping(value = "/api/v1/health-data/anxiety-assessments", produces = "application/json")
+@Tag(name = "Anxiety Assessments", description = "Anxiety Assessments operations: listing, retrieval, creation, update, and deletion")
+public class AnxietyAssessmentController {
+    private final AnxietyAssessmentService anxietyAssessmentService;
+    private final AnxietyAssessmentMapper mapper;
 
-    public PhysiologicalDataController(PhysiologicalDataService physiologicalDataService, PhysiologicalDataMapper mapper) {
-        this.physiologicalDataService = physiologicalDataService;
+    public AnxietyAssessmentController(AnxietyAssessmentService anxietyAssessmentService, AnxietyAssessmentMapper mapper) {
+        this.anxietyAssessmentService = anxietyAssessmentService;
         this.mapper = mapper;
     }
 
-    @Operation(summary = "Get all physiological data", description = "Returns physiological data list")
+    @Operation(summary = "Get all anxiety assessments", description = "Returns anxiety assessments list")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully got"),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = { @Content(schema = @Schema()) }),
@@ -40,27 +40,26 @@ public class PhysiologicalDataController {
             @ApiResponse(responseCode = "404", description = "Not Found", content = { @Content(schema = @Schema()) })
     })
     @GetMapping
-    public Page<PhysiologicalDataResource> getAllPhysiologicalData(@Parameter(hidden = true) @RequestHeader("Authorization") String jwt, Pageable pageable) {
-        return mapper.modelListPage(physiologicalDataService.getAll(), pageable);
+    public Page<AnxietyAssessmentResource> getAllAnxietyAssessments(@Parameter(hidden = true) @RequestHeader("Authorization") String jwt, Pageable pageable) {
+        return mapper.modelListPage(anxietyAssessmentService.getAll(), pageable);
     }
 
-    @Operation(summary = "Get physiological data by id", description = "Returns physiological data with a provided id")
+    @Operation(summary = "Get anxiety assessment by id", description = "Returns anxiety assessment with a provided id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully got"),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = { @Content(schema = @Schema()) }),
             @ApiResponse(responseCode = "403", description = "Forbidden", content = { @Content(schema = @Schema()) }),
             @ApiResponse(responseCode = "404", description = "Not Found", content = { @Content(schema = @Schema()) })
     })
-    @GetMapping("{physiologicalDataId}")
-    public PhysiologicalDataResource getPhysiologicalDataById(
+    @GetMapping("{anxietyAssessmentId}")
+    public AnxietyAssessmentResource getAnxietyAssessmentById(
             @Parameter(hidden = true) @RequestHeader("Authorization") String jwt,
-            @Parameter(description = "Physiological Data Id", required = true, examples = @ExampleObject(name = "physiologicalDataId", value = "1")) @PathVariable Integer physiologicalDataId
+            @Parameter(description = "Anxiety Assessment Id", required = true, examples = @ExampleObject(name = "anxietyAssessmentId", value = "1")) @PathVariable Integer anxietyAssessmentId
     ) {
-        return mapper.toResource(physiologicalDataService.getById(physiologicalDataId));
+        return mapper.toResource(anxietyAssessmentService.getById(anxietyAssessmentId));
     }
 
-
-    @Operation(summary = "Get physiological data by patient id", description = "Returns physiological data with a provided patient id")
+    @Operation(summary = "Get anxiety assessments by patient id", description = "Returns anxiety assessments with a provided patient id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully got"),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = { @Content(schema = @Schema()) }),
@@ -68,14 +67,15 @@ public class PhysiologicalDataController {
             @ApiResponse(responseCode = "404", description = "Not Found", content = { @Content(schema = @Schema()) })
     })
     @GetMapping("byPatientId/{patientId}")
-    public Page<PhysiologicalDataResource> getPhysiologicalDataByPatientId(
+    public Page<AnxietyAssessmentResource> getAnxietyAssessmentsByPatientId(
             @Parameter(hidden = true) @RequestHeader("Authorization") String jwt,
             @Parameter(description = "Patient Id", required = true, examples = @ExampleObject(name = "patientId", value = "1")) @PathVariable Integer patientId, Pageable pageable
     ) {
-        return mapper.modelListPage(physiologicalDataService.getByPatientId(patientId), pageable);
+        return mapper.modelListPage(anxietyAssessmentService.getByPatientId(patientId), pageable);
     }
 
-    @Operation(summary = "Create physiological data", description = "Register a physiological data")
+
+    @Operation(summary = "Create anxiety assessment", description = "Register a anxiety assessment")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully created"),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = { @Content(schema = @Schema()) }),
@@ -84,19 +84,19 @@ public class PhysiologicalDataController {
             @ApiResponse(responseCode = "500", description = "Internal Server Error", content = { @Content(schema = @Schema()) })
     })
     @PostMapping
-    public ResponseEntity<PhysiologicalDataResource> createPhysiologicalData(
+    public ResponseEntity<AnxietyAssessmentResource> createAnxietyAssessment(
             //@Parameter(hidden = true) @RequestHeader("Authorization") String jwt,
             //@RequestBody CreateCertificationResource resource) {
             //return new ResponseEntity<>(mapper.toResource(certificationService.create(jwt, resource)), HttpStatus.CREATED);
-            @RequestBody CreatePhysiologicalDataResource resource,
+            @RequestBody CreateAnxietyAssessmentResource resource,
             @RequestHeader(HttpHeaders.AUTHORIZATION) String authorizationHeader) {
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             authorizationHeader = authorizationHeader.substring(7);
         }
-        return new ResponseEntity<>(mapper.toResource(physiologicalDataService.create(authorizationHeader,(resource))), HttpStatus.CREATED);
+        return new ResponseEntity<>(mapper.toResource(anxietyAssessmentService.create(authorizationHeader,(resource))), HttpStatus.CREATED);
     }
 
-    @Operation(summary = "Update a physiological data partially", description = "Updates a physiological data partially based on the provided data")
+    @Operation(summary = "Update a anxiety assessment partially", description = "Updates a anxiety assessment partially based on the provided data")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully updated"),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = { @Content(schema = @Schema()) }),
@@ -104,16 +104,16 @@ public class PhysiologicalDataController {
             @ApiResponse(responseCode = "404", description = "Not Found", content = { @Content(schema = @Schema()) }),
             @ApiResponse(responseCode = "500", description = "Internal Server Error", content = { @Content(schema = @Schema()) })
     })
-    @PatchMapping("{physiologicalDataId}")
-    public ResponseEntity<PhysiologicalDataResource> patchPhysiologicalData(
+    @PatchMapping("{anxietyAssessmentId}")
+    public ResponseEntity<AnxietyAssessmentResource> patchAnxietyAssessment(
             @Parameter(hidden = true) @RequestHeader("Authorization") String jwt,
-            @Parameter(description = "Physiological Data Id", required = true, examples = @ExampleObject(name = "physiologicalDataId", value = "1")) @PathVariable Integer physiologicalDataId,
-            @RequestBody UpdatePhysiologicalDataResource request
+            @Parameter(description = "Anxiety Assessment Id", required = true, examples = @ExampleObject(name = "anxietyAssessmentId", value = "1")) @PathVariable Integer anxietyAssessmentId,
+            @RequestBody UpdateAnxietyAssessmentResource request
     ) {
-        return new ResponseEntity<>(mapper.toResource(physiologicalDataService.update(jwt, physiologicalDataId,request)), HttpStatus.CREATED);
+        return new ResponseEntity<>(mapper.toResource(anxietyAssessmentService.update(jwt, anxietyAssessmentId,request)), HttpStatus.CREATED);
     }
 
-    @Operation(summary = "Delete a physiological data", description = "Delete a physiological data with a provided id")
+    @Operation(summary = "Delete a anxiety assessment", description = "Delete a anxiety assessment with a provided id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully deleted"),
             @ApiResponse(responseCode = "401", description = "Unauthorized", content = { @Content(schema = @Schema()) }),
@@ -121,10 +121,10 @@ public class PhysiologicalDataController {
             @ApiResponse(responseCode = "404", description = "Not Found", content = { @Content(schema = @Schema()) }),
             @ApiResponse(responseCode = "500", description = "Internal Server Error", content = { @Content(schema = @Schema()) })
     })
-    @DeleteMapping("{physiologicalDataId}")
-    public ResponseEntity<?> deletePhysiologicalData(
+    @DeleteMapping("{anxietyAssessmentId}")
+    public ResponseEntity<?> deleteAnxietyAssessment(
             @Parameter(hidden = true) @RequestHeader("Authorization") String jwt,
-            @Parameter(description = "Physiological Data Id", required = true, examples = @ExampleObject(name = "physiologicalDataId", value = "1")) @PathVariable Integer physiologicalDataId) {
-        return physiologicalDataService.delete(jwt, physiologicalDataId);
+            @Parameter(description = "Anxiety Assessment Id", required = true, examples = @ExampleObject(name = "anxietyAssessmentId", value = "1")) @PathVariable Integer anxietyAssessmentId) {
+        return anxietyAssessmentService.delete(jwt, anxietyAssessmentId);
     }
 }

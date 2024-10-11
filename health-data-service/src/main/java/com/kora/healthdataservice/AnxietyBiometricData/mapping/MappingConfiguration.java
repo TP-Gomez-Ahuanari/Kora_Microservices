@@ -6,5 +6,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration("healthDataMappingConfiguration")
 public class MappingConfiguration {
     @Bean
-    public PhysiologicalDataMapper certificationMapper() { return new PhysiologicalDataMapper();}
+    public PhysiologicalDataMapper physiologicalDataMapper() { return new PhysiologicalDataMapper();}
+
+    @Bean
+    public AnxietyAssessmentMapper anxietyAssessmentMapper() { return new AnxietyAssessmentMapper();}
 }
