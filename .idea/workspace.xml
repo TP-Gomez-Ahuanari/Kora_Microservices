@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fe51993-522f-4345-9199-99e4e7de54fd" name="Changes" comment="feat(health-data-service): create Anxiety Assessment service">
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/api/rest/PatientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/domain/model/entity/Patient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/domain/persistence/PatientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/domain/service/PatientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/mapping/MappingConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/mapping/PatientMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/resource/CreatePatientResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/resource/PatientResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/resource/UpdatePatientResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/service/PatientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Configuration/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Configuration/ValidationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/EnhancedModelMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Exception/ResourceValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Exception/UnauthorizedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/MappingConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/domain/model/entity/External/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/domain/model/entity/External/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/Shared/Exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/Shared/Exception/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-access-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-access-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/IdentityAccessServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/IdentityAccessServiceApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="0fe51993-522f-4345-9199-99e4e7de54fd" name="Changes" comment="feat(iam-service): create Patients service" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +75,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "project.scopes",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -208,6 +184,7 @@
       <workItem from="1728617371108" duration="11041000" />
       <workItem from="1728671093279" duration="1777000" />
       <workItem from="1728675413244" duration="4659000" />
+      <workItem from="1729202541956" duration="611000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config-server): first service creation">
       <option name="closed" value="true" />
@@ -265,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728623676647</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat(iam-service): create Patients service">
+      <option name="closed" value="true" />
+      <created>1729202606803</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729202606804</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +274,7 @@
     <MESSAGE value="feat(eureka-server): fixes" />
     <MESSAGE value="feat(health-data-service): created Health Data Service" />
     <MESSAGE value="feat(health-data-service): create Health Data Service Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(health-data-service): create Health Data Service Controller" />
+    <MESSAGE value="feat(iam-service): create Patients service" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(iam-service): create Patients service" />
   </component>
 </project>
