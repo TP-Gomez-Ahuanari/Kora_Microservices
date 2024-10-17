@@ -22,9 +22,9 @@ public class IdentityAccessServiceApplication {
     public OpenAPI customOpenApi() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Kora - identity-access-service")
+                        .title("Kora - Identity Access Service")
                         .version("1.0")
-                        .description("Kora-identity-access-service Service, made with java and springboot, applying domain-driven architecture approach.")
+                        .description("Kora Identity Access Service, made with java and springboot, applying domain-driven architecture approach.")
                         .termsOfService(".")
                         .license(new License()
                                 .name("Apache 2.0 License")

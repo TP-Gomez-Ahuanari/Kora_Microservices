@@ -1,9 +1,6 @@
-package com.kora.healthdataservice.AnxietyBiometricData.domain.model.entity.External;
+package com.kora.identityaccessservice.Authentication.resource;
 
-import jakarta.persistence.Column;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -12,7 +9,7 @@ import java.time.LocalDateTime;
 @With
 @NoArgsConstructor
 @AllArgsConstructor
-public class Patient {
+public class PatientResource {
     private Integer id;
     private String fullName;
     private String email;

@@ -4,20 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fe51993-522f-4345-9199-99e4e7de54fd" name="Changes" comment="feat(health-data-service): create Health Data Service Controller">
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/api/rest/AnxietyAssessmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/domain/persistence/AnxietyAssessmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/domain/service/AnxietyAssessmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/mapping/AnxietyAssessmentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/resource/AnxietyAssessment/AnxietyAssessmentResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/resource/AnxietyAssessment/CreateAnxietyAssessmentResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/resource/AnxietyAssessment/UpdateAnxietyAssessmentResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/service/AnxietyAssessmentServiceImpl.java" afterDir="false" />
+    <list default="true" id="0fe51993-522f-4345-9199-99e4e7de54fd" name="Changes" comment="feat(health-data-service): create Anxiety Assessment service">
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/api/rest/PatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/domain/model/entity/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/domain/persistence/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/domain/service/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/mapping/MappingConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/mapping/PatientMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/resource/CreatePatientResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/resource/PatientResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/resource/UpdatePatientResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Authentication/service/PatientServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Configuration/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Configuration/ValidationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/EnhancedModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Exception/ResourceValidationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/Exception/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/Shared/MappingConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/api/rest/PhysiologicalDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/api/rest/PhysiologicalDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/domain/model/entity/AnxietyAssessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/domain/model/entity/AnxietyAssessment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/mapping/MappingConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/mapping/MappingConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/service/PhysiologicalDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/service/PhysiologicalDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/domain/model/entity/External/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/AnxietyBiometricData/domain/model/entity/External/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/Shared/Exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/health-data-service/src/main/java/com/kora/healthdataservice/Shared/Exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-access-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity-access-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/IdentityAccessServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity-access-service/src/main/java/com/kora/identityaccessservice/IdentityAccessServiceApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +85,11 @@
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.HealthDataServiceApplication.executor": "Run",
+    "Spring Boot.IdentityAccessServiceApplication.executor": "Run",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-22",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/crist/Documents/UPC - Ingeniería de Software/Ciclo 9/Agile",
+    "last_opened_file_path": "C:/Users/crist/Documents/UPC - Ingeniería de Software/Ciclo 9/Kora_Microservices",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,6 +103,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\crist\Documents\UPC - Ingeniería de Software\Ciclo 9\Kora_Microservices\identity-access-service\src\main\java\com\kora\identityaccessservice\Shared\Configuration" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -101,7 +117,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HealthDataServiceApplication">
+  <component name="RunManager" selected="Spring Boot.IdentityAccessServiceApplication">
     <configuration name="All in health-data-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-data-service" />
       <option name="PACKAGE_NAME" value="" />
@@ -137,14 +153,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IdentityAccessServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="identity-access-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kora.identityaccessservice.IdentityAccessServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kora.identityaccessservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.All in health-data-service" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.IdentityAccessServiceApplication" />
       <item itemvalue="Spring Boot.HealthDataServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.IdentityAccessServiceApplication" />
         <item itemvalue="Spring Boot.HealthDataServiceApplication" />
         <item itemvalue="JUnit.All in health-data-service" />
       </list>
@@ -175,6 +206,8 @@
       <workItem from="1728449543170" duration="92000" />
       <workItem from="1728537777478" duration="5215000" />
       <workItem from="1728617371108" duration="11041000" />
+      <workItem from="1728671093279" duration="1777000" />
+      <workItem from="1728675413244" duration="4659000" />
     </task>
     <task id="LOCAL-00001" summary="feat(config-server): first service creation">
       <option name="closed" value="true" />
